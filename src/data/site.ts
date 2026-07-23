@@ -1,5 +1,6 @@
 export const site = {
     "domain":  "carroattrezzilivorno24h.it",
+    "template":  "studio",
     "description":  "Carroattrezzi a Livorno e soccorso stradale a Livorno: traino, recupero auto, assistenza moto e interventi rapidi in città e provincia.",
     "tel":  "+3905861802274",
     "city":  "Livorno",
