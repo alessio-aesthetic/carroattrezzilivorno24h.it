@@ -540,12 +540,12 @@ export default function Home() {
     <div data-template={site.template} className="site-shell">
       <JsonLd />
       <Header />
-      <main>
+      <main className="template-home">
         <Hero />
-        <Urgencies />
-        <Services />
-        <Zones />
         <WhyAndPricing />
+        <Services />
+        <Urgencies />
+        <Zones />
         <Faqs />
         <FinalCta />
       </main>
@@ -555,11 +555,4 @@ export default function Home() {
     </div>
   )
 }
-
-
-
-
-
-
-
 
