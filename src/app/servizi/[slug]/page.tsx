@@ -30,9 +30,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-white">
-      <section className="bg-[#F0FDFA] py-16">
+      <section className="bg-[#F4F5F8] py-16">
         <Container>
-          <div className="overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-orange-950/10 ring-1 ring-orange-100">
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl shadow-slate-900/10">
             <img
               src={`/images/services/${service.slug}.jpg`}
               alt={`${service.title} a Livorno con carroattrezzi professionale`}
@@ -40,8 +40,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             />
             <div className="grid gap-8 p-8 lg:grid-cols-[1fr_0.45fr] lg:p-12">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#0F766E]">
-                  servizio carroattrezzi
+                <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#1E6C83]">
+                  intervento verificato · Livorno
                 </p>
                 <h1 className="mt-4 max-w-4xl font-display text-5xl font-bold tracking-tight text-slate-950">
                   {service.title} a Livorno
@@ -58,9 +58,66 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                     portare il mezzo e quali attenzioni servono durante il
                     recupero.
                   </p>
+                  <p>
+                    A Livorno ogni intervento può presentare condizioni diverse:
+                    un’auto può essere ferma sul lungomare, in una strada del
+                    centro, vicino al porto, in una zona industriale o lungo un
+                    collegamento provinciale. Per questo chiediamo sempre se il
+                    mezzo è accessibile, se le ruote girano, se ci sono danni
+                    visibili e se il veicolo trasporta persone o oggetti da
+                    proteggere. Sono dettagli semplici, ma permettono di
+                    scegliere il modo più prudente per caricare e trasportare
+                    l’auto.
+                  </p>
+                  <p>
+                    Anche la destinazione viene definita con attenzione. Puoi
+                    indicare un’officina di fiducia, una carrozzeria, un deposito
+                    o un indirizzo privato. Se non hai ancora deciso, ti
+                    aiutiamo a valutare il passaggio più pratico in base al
+                    problema riscontrato. L’obiettivo è evitare spostamenti
+                    inutili e accompagnarti fino a una soluzione concreta, con
+                    una comunicazione chiara prima dell’uscita del mezzo.
+                  </p>
+                  <p>
+                    La preparazione cambia in base al servizio richiesto. Un
+                    traino semplice può richiedere un accesso libero e un punto
+                    di aggancio praticabile; un veicolo incidentato può avere
+                    ruote bloccate, parti sporgenti o danni che rendono
+                    necessario lavorare con maggiore cautela. Se si tratta di
+                    una moto, di uno scooter o di un furgone leggero, è utile
+                    comunicare dimensioni e condizioni per evitare di arrivare
+                    con un mezzo non adeguato.
+                  </p>
+                  <p>
+                    Anche l’ambiente intorno al veicolo fa la differenza. Un
+                    recupero sul lungomare, in una via stretta del centro, in
+                    prossimità del porto o in una zona industriale presenta
+                    spazi di manovra e flussi di traffico diversi. Descrivere
+                    i riferimenti visibili, la direzione di marcia e l’accesso
+                    più semplice permette di lavorare con maggiore ordine e di
+                    ridurre le attese legate a indicazioni incomplete.
+                  </p>
+                  <p>
+                    Se il problema sembra limitato a una batteria scarica o a
+                    una gomma, non è sempre prudente tentare di ripartire. Una
+                    ruota danneggiata, un rumore insolito, una spia importante o
+                    una perdita possono trasformare un guasto in un danno più
+                    serio. Prima di spostare il mezzo, racconta ciò che hai
+                    notato: possiamo aiutarti a capire se serve assistenza sul
+                    posto oppure un trasporto verso un’officina.
+                  </p>
+                  <p>
+                    Il nostro obiettivo è rendere il servizio comprensibile
+                    dall’inizio alla fine. Ti aiutiamo a raccogliere i dati
+                    essenziali, a indicare la destinazione e a preparare le
+                    persone presenti al momento dell’arrivo. In questo modo il
+                    recupero resta concentrato sul problema reale e il veicolo
+                    viene gestito con attenzione, senza aggiungere passaggi
+                    evitabili a una situazione già delicata.
+                  </p>
                 </div>
               </div>
-              <div className="rounded-3xl bg-slate-950 p-6 text-white">
+              <div className="rounded-3xl bg-[#101A33] p-6 text-white">
                 <p className="font-display text-2xl font-bold">
                   Chiamata chiara, intervento ordinato.
                 </p>
@@ -71,7 +128,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                 <div className="mt-6 flex flex-col gap-3">
                   <Link
                     href={`tel:${site.tel}`}
-                    className="rounded-full bg-[#0F766E] px-6 py-3 text-center text-sm font-semibold text-white"
+                    className="rounded-xl bg-[#B8F34A] px-6 py-3 text-center text-sm font-black text-[#101A33]"
                   >
                     Chiama {site.phone}
                   </Link>
@@ -101,7 +158,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             ].map(([title, text]) => (
               <div
                 key={title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
+                className="rounded-2xl border border-slate-200 bg-[#F5F8FC] p-6"
               >
                 <h2 className="font-display text-2xl font-bold text-slate-950">
                   {title}
@@ -110,7 +167,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               </div>
             ))}
           </div>
-          <div className="mt-12 rounded-[2rem] bg-[#1F2937] p-8 text-white">
+          <div className="mt-12 rounded-[2rem] bg-[#101A33] p-8 text-white">
             <h2 className="font-display text-3xl font-bold">
               Quando è meglio chiamare subito
             </h2>

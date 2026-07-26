@@ -1,63 +1,22 @@
-import { type Metadata } from 'next'
-import { Inter, Lexend } from 'next/font/google'
-import clsx from 'clsx'
-
-import { site } from '@/data/site'
-import '@/styles/tailwind.css'
+import { Metadata } from 'next';
+import { Suspense } from 'react';
+import SmoothScrollProvider from '@/components/shared/SmoothScroll';
+import { ThemeProvider } from '@/components/shared/ThemeProvider';
+import Footer from '@/components/shared/footer/Footer';
+import Navbar from '@/components/shared/navbar/Navbar';
+import { site } from '@/data/site';
+import { interTight } from '@/utils/font';
+import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://${site.domain}`),
-  title: {
-    template: `%s | ${site.name}`,
-    default: site.title,
-  },
+  title: site.title,
   description: site.description,
-  icons: { icon: "/favicon.svg" },
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: site.title,
-    description: site.description,
-    url: `https://${site.domain}`,
-    siteName: site.domain,
-    locale: 'it_IT',
-    type: 'website',
-  },
+  metadataBase: new URL(`https://${site.domain}`),
+  alternates: { canonical: '/' },
+  openGraph: { title: site.title, description: site.description, url: `https://${site.domain}`, locale: 'it_IT', type: 'website' },
+  icons: { icon: '/favicon.ico' },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="it" suppressHydrationWarning><body className={`${interTight.variable} antialiased`}><ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange><Suspense fallback={null}><SmoothScrollProvider><Navbar />{children}<Footer /></SmoothScrollProvider></Suspense></ThemeProvider></body></html>;
 }
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
-})
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html
-      lang="it"
-      className={clsx(
-        'h-full scroll-smooth bg-white antialiased',
-        inter.variable,
-        lexend.variable,
-      )}
-    >
-      <body className="flex h-full flex-col">{children}</body>
-    </html>
-  )
-}
-
-
-
-
-
