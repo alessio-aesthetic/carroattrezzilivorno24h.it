@@ -1,21 +1,5 @@
-import CTA from '@/components/home/CTA';
-import Features from '@/components/home/Features';
-import Hero from '@/components/home/Hero';
-import Integration from '@/components/home/Integration';
-import SelectUs from '@/components/home/SelectUs';
-import Services from '@/components/home/Services';
-import Testimonial from '@/components/home/Testimonial';
+import ProprietaryHome from '@/components/ProprietaryHome'
 
 export default function Home() {
-  return (
-    <main className="bg-background-3 dark:bg-background-7">
-      <Hero />
-      <Features />
-      <SelectUs />
-      <Services />
-      <Integration />
-      <Testimonial />
-      <CTA />
-    </main>
-  );
+  return <ProprietaryHome />
 }
