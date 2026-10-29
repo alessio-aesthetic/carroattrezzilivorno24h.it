@@ -5,7 +5,7 @@
     "tel":  "+3905861802274",
     "city":  "Livorno",
     "name":  "Carroattrezzi Livorno",
-    "address":  "Via Provinciale Pisana, 42 - 57124 Livorno LI",
+    "address":  "V. di Popogna, 44, 57128 Livorno LI",
     "title":  "Carroattrezzi a Livorno 24H | Soccorso stradale",
     "phone":  "0586 180 2274",
     "email":  "assistenza@carroattrezzilivorno24h.it"
