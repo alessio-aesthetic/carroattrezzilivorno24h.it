@@ -18,5 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="it" suppressHydrationWarning><body className={`${interTight.variable} antialiased`}><ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange><Suspense fallback={null}><SmoothScrollProvider><Navbar />{children}<Footer /></SmoothScrollProvider></Suspense></ThemeProvider></body></html>;
+  return <html lang="it" suppressHydrationWarning><body className={`${interTight.variable} antialiased`}><ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange><Suspense fallback={null}><SmoothScrollProvider><Navbar />{children}<Footer /></SmoothScrollProvider></Suspense></ThemeProvider><script defer src="/privacy-notice.js" />
+      </body></html>;
 }
